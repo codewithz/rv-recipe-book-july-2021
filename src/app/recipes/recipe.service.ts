@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 import { Recipe } from './recipe.model';
 
@@ -41,11 +42,15 @@ export class RecipeService {
   //     'https://curlytales.com/wp-content/uploads/2019/09/pizza-e1569475959190-1280x720.jpg')
   //   ];
   
-  constructor() { 
+  constructor(private shoppingListService:ShoppingListService) { 
 
   }
 
   getRecipes(){
     return this.recipes.slice();
+  }
+
+  addIngredientsToShoppingList(ingredients:Ingredient[]){
+    this.shoppingListService.addIngredients(ingredients);
   }
 }
