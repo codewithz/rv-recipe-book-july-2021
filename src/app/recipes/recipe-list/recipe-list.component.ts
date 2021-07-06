@@ -10,7 +10,7 @@ import { RecipeService } from '../recipe.service';
 })
 export class RecipeListComponent implements OnInit {
 
-  @Output('recipeWasSelected') recipeWasSelected=new EventEmitter<Recipe>();
+  // @Output('recipeWasSelected') recipeWasSelected=new EventEmitter<Recipe>();
 
   recipes:Recipe[]=[];
 
@@ -22,8 +22,8 @@ export class RecipeListComponent implements OnInit {
     this.recipes=this.recipeService.getRecipes();
   }
 
-  onRecipeSelected(recipe:Recipe){
-    this.recipeWasSelected.emit(recipe)
-  }
+  // onRecipeSelected(recipe:Recipe){
+  //   this.recipeWasSelected.emit(recipe)
+  // }
 
 }
