@@ -9,7 +9,7 @@ import { RecipeService } from './recipe.service';
 })
 export class RecipesComponent implements OnInit {
 
-  selectedRecipe:Recipe=new Recipe('','','');
+  selectedRecipe:Recipe=new Recipe('','','',[]);
   isRecipeSelected:boolean=false;
 
   constructor(private recipeService:RecipeService) { 

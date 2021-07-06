@@ -9,7 +9,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailComponent implements OnInit {
 
 
-  @Input('recipe') recipe:Recipe=new Recipe('','','')
+  @Input('recipe') recipe:Recipe=new Recipe('','','',[])
 
   constructor() { }
 
